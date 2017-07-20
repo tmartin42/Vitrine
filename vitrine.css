@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -48,5 +49,91 @@ html, body {
 }
 
 body {
-    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.block {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    border-top: 1px solid #e4e4e4;
+}
+
+.block.para {
+    border: none;
+    height: 100%;
+}
+
+.block.shadow {
+    box-shadow: inset 0px 11px 11px -11px;
+    border: none;
+}
+
+.block .parallax {
+    background: url('images/bg_vitrine_main.jpg');
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% + 500px);
+    background-size: cover;
+}
+
+.main_title_cont {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+    background-color: rgba(0, 53, 84, 0.53);
+    font-family: 'Dosis', sans-serif;
+}
+
+.main_title_cont h1 {
+    display: block;
+    position: relative;
+    margin: 275px 230px 5px;
+    font-size: 90px;
+    color: white;
+}
+
+.main_title_cont p {
+        display: block;
+    position: relative;
+    margin: 90px 260px 5px;
+    font-size: 40px;
+    color: white;
+}
+
+.me {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    top: -190px;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    padding: 10px;
+    border-radius: 233px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.32);
+    transition: top 0.5s cubic-bezier(0.13, 0.04, 0.62, 1);
+}
+
+.me.hiding {
+    top: 900px;
+}
+
+.me img {
+    width: 280px;
+    height: 280px;
+    border-radius: 213px;
 }
